@@ -11,7 +11,6 @@
 // Complete the solution so that it returns the greatest sequence of five consecutive digits found within the number given. The number will be passed in as a string of only digits. It should return a five digit integer. The number passed may be as large as 1000 digits.
 
 function solution(digits){
-  // let digitsArr = digits.split("").map(Number);
   let digitsArr = digits.split("");
   // let digitz = digits.split("");
   // console.log('digitz',digitz);
@@ -19,7 +18,7 @@ function solution(digits){
   //   console.log('digit',digit);
   //   +digit
   // })
-  console.log('digitsArr',digitsArr);
+  // console.log('digitsArr',digitsArr);
   let arr = [];
   for (let i = 0; i < digitsArr.length -4; i++) {
     arr.push(+(digitsArr[i] + digitsArr[i+1] + digitsArr[i+2] + digitsArr[i+3] + digitsArr[i+4]));
@@ -29,9 +28,11 @@ function solution(digits){
   // arr.map(a => {
   //   return +a
   // })
-  console.log('arr',arr);
+  // console.log('arr',arr);
+  // console.log(Math.max.apply(null, arr));
+  return Math.max.apply(null, arr);
   // console.log('digit',digit); 
 }
 
-// console.log(solution("1234567890"))
+console.log(solution("1234567890"))
 solution("1234567890");
