@@ -12,26 +12,11 @@
 
 function solution(digits){
   let digitsArr = digits.split("");
-  // let digitz = digits.split("");
-  // console.log('digitz',digitz);
-  // let digitsArr = digitz.forEach(digit => {
-  //   console.log('digit',digit);
-  //   +digit
-  // })
-  // console.log('digitsArr',digitsArr);
   let arr = [];
   for (let i = 0; i < digitsArr.length -4; i++) {
-    arr.push(+(digitsArr[i] + digitsArr[i+1] + digitsArr[i+2] + digitsArr[i+3] + digitsArr[i+4]));
-    
+    arr.push(+(digitsArr[i] + digitsArr[i+1] + digitsArr[i+2] + digitsArr[i+3] + digitsArr[i+4]));    
   }
-  // console.log('digitsArr', digitsArr);
-  // arr.map(a => {
-  //   return +a
-  // })
-  // console.log('arr',arr);
-  // console.log(Math.max.apply(null, arr));
-  return Math.max.apply(null, arr);
-  // console.log('digit',digit); 
+  return Math.max.apply(null, arr); 
 }
 
 console.log(solution("1234567890"))
